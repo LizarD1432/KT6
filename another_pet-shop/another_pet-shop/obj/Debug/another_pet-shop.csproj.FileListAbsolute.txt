@@ -28,3 +28,33 @@ C:\Users\Lizardus\OneDrive\Рабочий стол\a\KT6\another_pet-shop\anothe
 C:\Users\Lizardus\OneDrive\Рабочий стол\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop.pdb
 C:\Users\Lizardus\OneDrive\Рабочий стол\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\AddNewProductPage.g.cs
 C:\Users\Lizardus\OneDrive\Рабочий стол\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\AddNewProductPage.baml
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\bin\Debug\another_pet-shop.exe.config
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\bin\Debug\another_pet-shop.exe
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\bin\Debug\another_pet-shop.pdb
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\bin\Debug\EntityFramework.dll
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\bin\Debug\EntityFramework.xml
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop.csproj.AssemblyReference.cache
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\MainWindow.g.cs
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\AddNewProductPage.g.cs
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\AdminPage.g.cs
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\LoginPage.g.cs
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\ProductViewPage.g.cs
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\App.g.cs
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop_Content.g.cs
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop_MarkupCompile.cache
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop_MarkupCompile.lref
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\MainWindow.baml
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\AddNewProductPage.baml
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\AdminPage.baml
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\LoginPage.baml
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\pages\ProductViewPage.baml
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop.g.resources
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet_shop.Properties.Resources.resources
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop.csproj.GenerateResource.cache
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop.csproj.CoreCompileInputs.cache
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop.csproj.CopyComplete
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop.exe
+C:\Users\comcuru\Desktop\a\KT6\another_pet-shop\another_pet-shop\obj\Debug\another_pet-shop.pdb

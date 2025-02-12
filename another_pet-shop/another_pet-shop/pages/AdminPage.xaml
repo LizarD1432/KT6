@@ -9,6 +9,7 @@
       Title="Страница администратора" Background="White">
 
     <Grid>
-        
+        <Button x:Name="AddNewProductButton" Width="150" Height="30" VerticalAlignment="Bottom" Margin="0, 0, 0, 70" FontFamily="Comic Sans MS" Content="Загрузить новый товар" Background="#FF76E383" Click="AddNewProductButton_Click"></Button>
+        <Button x:Name="ExitButton" Width="170" Height="30" VerticalAlignment="Bottom" Margin="0, 0, 0, 20" FontFamily="Comic Sans MS" Content="На страницу авторизации" Background="#FF76E383" Click="ExitButton_Click"></Button>
     </Grid>
 </Page>

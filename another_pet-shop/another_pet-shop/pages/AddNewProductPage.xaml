@@ -9,6 +9,55 @@
       Title="Добавление нового товара" Background="White">
 
     <Grid>
-        
+        <Grid Height="380" Width="800">
+            <Grid Width="350" HorizontalAlignment="Left">
+                <StackPanel>
+                    <Grid Height="40">
+                        <TextBlock Text="Наименование" FontFamily="Comic Sans MS" FontSize="12" Margin="20, 0, 0, 0"/>
+                        <TextBox Height="30" Width="200" HorizontalAlignment="Right"/>
+                    </Grid>
+
+                    <Grid Height="40">
+                        <TextBlock Text="Категория" FontFamily="Comic Sans MS" FontSize="12" Margin="20, 0, 0, 0"/>
+                        <ComboBox Height="30" Width="200" HorizontalAlignment="Right"/>
+                    </Grid>
+
+                    <Grid Height="40">
+                        <TextBlock Text="Сколько на складе" FontFamily="Comic Sans MS" FontSize="12" Margin="20, 0, 0, 0"/>
+                        <TextBox Height="30" Width="200" HorizontalAlignment="Right"/>
+                    </Grid>
+
+                    <Grid Height="40">
+                        <TextBlock Text="Единица измерения" FontFamily="Comic Sans MS" FontSize="12" Margin="20, 0, 0, 0"/>
+                        <TextBox Height="30" Width="200" HorizontalAlignment="Right"/>
+                    </Grid>
+
+                    <Grid Height="40">
+                        <TextBlock Text="Поставщик" FontFamily="Comic Sans MS" FontSize="12" Margin="20, 0, 0, 0"/>
+                        <TextBox Height="30" Width="200" HorizontalAlignment="Right"/>
+                    </Grid>
+                    <Grid Height="40">
+                        <TextBlock Text="Стоимость за единицу" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="12" Width="100" HorizontalAlignment="Left" Margin="20, 0, 0, 0"/>
+                        <TextBox Height="30" Width="200" HorizontalAlignment="Right"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid Width="350" HorizontalAlignment="Right" Margin="0, 0, 20, 0">
+                <StackPanel>
+                    <Grid Height="40">
+                        <TextBlock Text="Изображение" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="12" Width="100" HorizontalAlignment="Left" Margin="20, 0, 0, 0"/>
+                        <TextBox Height="30" Width="200" HorizontalAlignment="Right"/>
+                    </Grid>
+
+                    <Grid Height="200">
+                        <TextBlock Text="Описание" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="12" Width="100" HorizontalAlignment="Left" Margin="20, 0, 0, 0"/>
+                        <TextBox Height="195" Width="200" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <Button x:Name="GoBackButton" Width="150" Height="30" VerticalAlignment="Bottom" Margin="0, 0, 200, 20" FontFamily="Comic Sans MS" Content="Назад" Background="#FF76E383" Click="GoBackButton_Click"></Button>
+            <Button x:Name="AddProductButton" Width="150" Height="30" VerticalAlignment="Bottom" Margin="200, 0, 0, 20" FontFamily="Comic Sans MS" Content="Загрузить товар" Background="#FF76E383" Click="AddProductButton_Click"></Button>
+        </Grid>
     </Grid>
 </Page>

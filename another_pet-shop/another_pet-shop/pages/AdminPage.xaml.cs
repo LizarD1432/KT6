@@ -24,5 +24,15 @@ namespace another_pet_shop.pages
         {
             InitializeComponent();
         }
+
+        private void AddNewProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            classes.Manager.MainFrame.Navigate(new AddNewProductPage());
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            classes.Manager.MainFrame.Navigate(new LoginPage());
+        }
     }
 }

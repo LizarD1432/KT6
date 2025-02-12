@@ -24,5 +24,15 @@ namespace another_pet_shop.pages
         {
             InitializeComponent();
         }
+
+        private void GoBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            classes.Manager.MainFrame.Navigate(new ProductViewPage());
+        }
+
+        private void AddProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Новый товар отображается в списке", "Товар добавлен", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }
