@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KT6_LenchukModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="items" Relationship="Self.FK_items_category" FromRole="category" ToRole="items" />
+  </EntityType>
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="cityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="points" Relationship="Self.FK_points_city" FromRole="city" ToRole="points" />
+  </EntityType>
+  <EntityType Name="deliverer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="delivererName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="items" Relationship="Self.FK_items_deliverer" FromRole="deliverer" ToRole="items" />
+  </EntityType>
+  <EntityType Name="items">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="article" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idName" Type="Int32" Nullable="false" />
+    <Property Name="idQuantityType" Type="Int32" Nullable="false" />
+    <Property Name="cost" Type="Int32" Nullable="false" />
+    <Property Name="maxDiscount" Type="Int32" Nullable="false" />
+    <Property Name="idProducer" Type="Int32" Nullable="false" />
+    <Property Name="idDeliverer" Type="Int32" Nullable="false" />
+    <Property Name="irCategory" Type="Int32" Nullable="false" />
+    <Property Name="currentDiscount" Type="Int32" Nullable="false" />
+    <Property Name="inStock" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="imageHolder" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="category" Relationship="Self.FK_items_category" FromRole="items" ToRole="category" />
+    <NavigationProperty Name="deliverer" Relationship="Self.FK_items_deliverer" FromRole="items" ToRole="deliverer" />
+    <NavigationProperty Name="name" Relationship="Self.FK_items_name" FromRole="items" ToRole="name" />
+    <NavigationProperty Name="producer" Relationship="Self.FK_items_producer" FromRole="items" ToRole="producer" />
+    <NavigationProperty Name="quantityType" Relationship="Self.FK_items_quantityType" FromRole="items" ToRole="quantityType" />
+  </EntityType>
+  <EntityType Name="name">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="itemName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="items" Relationship="Self.FK_items_name" FromRole="name" ToRole="items" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="structure" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="deliverDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="point" Type="Int32" Nullable="false" />
+    <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="patro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="code" Type="Int32" Nullable="false" />
+    <Property Name="idStatus" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="points" Relationship="Self.FK_orders_points" FromRole="orders" ToRole="points" />
+    <NavigationProperty Name="status" Relationship="Self.FK_orders_status" FromRole="orders" ToRole="status" />
+  </EntityType>
+  <EntityType Name="points">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="indexes" Type="Int32" Nullable="false" />
+    <Property Name="idCity" Type="Int32" Nullable="false" />
+    <Property Name="idStreet" Type="Int32" Nullable="false" />
+    <Property Name="house" Type="Int32" />
+    <NavigationProperty Name="city" Relationship="Self.FK_points_city" FromRole="points" ToRole="city" />
+    <NavigationProperty Name="orders" Relationship="Self.FK_orders_points" FromRole="points" ToRole="orders" />
+    <NavigationProperty Name="street" Relationship="Self.FK_points_street" FromRole="points" ToRole="street" />
+  </EntityType>
+  <EntityType Name="producer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="producerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="items" Relationship="Self.FK_items_producer" FromRole="producer" ToRole="items" />
+  </EntityType>
+  <EntityType Name="quantityType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="quantityTypeName" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="items" Relationship="Self.FK_items_quantityType" FromRole="quantityType" ToRole="items" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="roles1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="user" Relationship="Self.FK_user_roles" FromRole="roles" ToRole="user" />
+  </EntityType>
+  <EntityType Name="status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="statusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="orders" Relationship="Self.FK_orders_status" FromRole="status" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="street">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="streetName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="points" Relationship="Self.FK_points_street" FromRole="street" ToRole="points" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idRoles" Type="Int32" Nullable="false" />
+    <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="patro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="roles" Relationship="Self.FK_user_roles" FromRole="user" ToRole="roles" />
+  </EntityType>
+  <Association Name="FK_items_category">
+    <End Role="category" Type="Self.category" Multiplicity="1" />
+    <End Role="items" Type="Self.items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="items">
+        <PropertyRef Name="irCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_points_city">
+    <End Role="city" Type="Self.city" Multiplicity="1" />
+    <End Role="points" Type="Self.points" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="city">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="points">
+        <PropertyRef Name="idCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_items_deliverer">
+    <End Role="deliverer" Type="Self.deliverer" Multiplicity="1" />
+    <End Role="items" Type="Self.items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="deliverer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="items">
+        <PropertyRef Name="idDeliverer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_items_name">
+    <End Role="name" Type="Self.name" Multiplicity="1" />
+    <End Role="items" Type="Self.items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="name">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="items">
+        <PropertyRef Name="idName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_items_producer">
+    <End Role="producer" Type="Self.producer" Multiplicity="1" />
+    <End Role="items" Type="Self.items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="items">
+        <PropertyRef Name="idProducer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_items_quantityType">
+    <End Role="quantityType" Type="Self.quantityType" Multiplicity="1" />
+    <End Role="items" Type="Self.items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="quantityType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="items">
+        <PropertyRef Name="idQuantityType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders_points">
+    <End Role="points" Type="Self.points" Multiplicity="1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="points">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="point" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders_status">
+    <End Role="status" Type="Self.status" Multiplicity="1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="idStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_points_street">
+    <End Role="street" Type="Self.street" Multiplicity="1" />
+    <End Role="points" Type="Self.points" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="street">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="points">
+        <PropertyRef Name="idStreet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_roles">
+    <End Role="roles" Type="Self.roles" Multiplicity="1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="idRoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KT6_LenchukEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="category" EntityType="Self.category" />
+    <EntitySet Name="city" EntityType="Self.city" />
+    <EntitySet Name="deliverer" EntityType="Self.deliverer" />
+    <EntitySet Name="items" EntityType="Self.items" />
+    <EntitySet Name="name" EntityType="Self.name" />
+    <EntitySet Name="orders" EntityType="Self.orders" />
+    <EntitySet Name="points" EntityType="Self.points" />
+    <EntitySet Name="producer" EntityType="Self.producer" />
+    <EntitySet Name="quantityType" EntityType="Self.quantityType" />
+    <EntitySet Name="roles" EntityType="Self.roles" />
+    <EntitySet Name="status" EntityType="Self.status" />
+    <EntitySet Name="street" EntityType="Self.street" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <AssociationSet Name="FK_items_category" Association="Self.FK_items_category">
+      <End Role="category" EntitySet="category" />
+      <End Role="items" EntitySet="items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_points_city" Association="Self.FK_points_city">
+      <End Role="city" EntitySet="city" />
+      <End Role="points" EntitySet="points" />
+    </AssociationSet>
+    <AssociationSet Name="FK_items_deliverer" Association="Self.FK_items_deliverer">
+      <End Role="deliverer" EntitySet="deliverer" />
+      <End Role="items" EntitySet="items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_items_name" Association="Self.FK_items_name">
+      <End Role="name" EntitySet="name" />
+      <End Role="items" EntitySet="items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_items_producer" Association="Self.FK_items_producer">
+      <End Role="producer" EntitySet="producer" />
+      <End Role="items" EntitySet="items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_items_quantityType" Association="Self.FK_items_quantityType">
+      <End Role="quantityType" EntitySet="quantityType" />
+      <End Role="items" EntitySet="items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders_points" Association="Self.FK_orders_points">
+      <End Role="points" EntitySet="points" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders_status" Association="Self.FK_orders_status">
+      <End Role="status" EntitySet="status" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_points_street" Association="Self.FK_points_street">
+      <End Role="street" EntitySet="street" />
+      <End Role="points" EntitySet="points" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_roles" Association="Self.FK_user_roles">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="user" EntitySet="user" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(KT6_LenchukModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(KT6_LenchukModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище KT6_LenchukModelContainer" CdmEntityContainer="KT6_LenchukEntities">
+    <EntitySetMapping Name="category">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="city">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.city">
+        <MappingFragment StoreEntitySet="city">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deliverer">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.deliverer">
+        <MappingFragment StoreEntitySet="deliverer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="delivererName" ColumnName="delivererName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.items">
+        <MappingFragment StoreEntitySet="items">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="article" ColumnName="article" />
+          <ScalarProperty Name="idName" ColumnName="idName" />
+          <ScalarProperty Name="idQuantityType" ColumnName="idQuantityType" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="maxDiscount" ColumnName="maxDiscount" />
+          <ScalarProperty Name="idProducer" ColumnName="idProducer" />
+          <ScalarProperty Name="idDeliverer" ColumnName="idDeliverer" />
+          <ScalarProperty Name="irCategory" ColumnName="irCategory" />
+          <ScalarProperty Name="currentDiscount" ColumnName="currentDiscount" />
+          <ScalarProperty Name="inStock" ColumnName="inStock" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="imageHolder" ColumnName="imageHolder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="name">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.name">
+        <MappingFragment StoreEntitySet="name">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="itemName" ColumnName="itemName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.orders">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="structure" ColumnName="structure" />
+          <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+          <ScalarProperty Name="deliverDate" ColumnName="deliverDate" />
+          <ScalarProperty Name="point" ColumnName="point" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="patro" ColumnName="patro" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="points">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.points">
+        <MappingFragment StoreEntitySet="points">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="indexes" ColumnName="indexes" />
+          <ScalarProperty Name="idCity" ColumnName="idCity" />
+          <ScalarProperty Name="idStreet" ColumnName="idStreet" />
+          <ScalarProperty Name="house" ColumnName="house" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="producer">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.producer">
+        <MappingFragment StoreEntitySet="producer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="producerName" ColumnName="producerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quantityType">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.quantityType">
+        <MappingFragment StoreEntitySet="quantityType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quantityTypeName" ColumnName="quantityTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.roles">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="roles1" ColumnName="roles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="status">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.status">
+        <MappingFragment StoreEntitySet="status">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="statusName" ColumnName="statusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="street">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.street">
+        <MappingFragment StoreEntitySet="street">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="streetName" ColumnName="streetName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="KT6_LenchukModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idRoles" ColumnName="idRoles" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="patro" ColumnName="patro" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище KT6_LenchukModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище KT6_LenchukModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище KT6_LenchukModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище KT6_LenchukModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KT6_LenchukModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище KT6_LenchukModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KT6_LenchukModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище KT6_LenchukModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище KT6_LenchukModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
